@@ -41,6 +41,9 @@ flutter:
     - assets/images/grimorio.png
     - assets/images/more_stars.svg
     - assets/images/grimorio_empty.svg
+    - assets/images/grimorio_1152.png
+    - assets/images/grimorio_titulo_1152.png
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
@@ -70,7 +73,7 @@ flutter:
 
 flutter_native_splash:
   color: "#4D1245"
-  image: assets/images/grimorio.png
+  image: assets/images/grimorio_1152.png
   android_12:
     color: "#4D1245"
     image: assets/images/grimorio_1152.png
