@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grimorio/screens/login.dart';
@@ -9,7 +10,8 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: Container(
+    return SafeArea(
+        child: Container(
       decoration: AppBackgroundProperties.boxDecoration,
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -19,16 +21,34 @@ class Dashboard extends StatelessWidget {
             child: Stack(
               alignment: Alignment.center,
               children: <Widget>[
-                SvgPicture.asset("assets/images/background.svg"),
+                //SvgPicture.asset("assets/images/background.svg"),
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    SvgPicture.asset("assets/images/logo.svg"),
+                    //SvgPicture.asset("assets/images/logo.svg"),
+                    CarouselSlider(
+                      items: <Widget>[
+                        Image.asset("assets/carousel/carousel-001.png"),
+                        Image.asset("assets/carousel/carousel-002.png"),
+                        Image.asset("assets/carousel/carousel-003.png"),
+                      ],
+                      options: CarouselOptions(
+                        autoPlay: true,
+                        enlargeCenterPage: true,
+                      ),
+                    ),
                     Padding(
                       padding: const EdgeInsets.only(top: 104.0),
-                      child: PrimaryButton(text: "Entrar", onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const Login(),));
-                      },),
+                      child: PrimaryButton(
+                        text: "Entrar",
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Login(),
+                              ));
+                        },
+                      ),
                     ),
                   ],
                 )

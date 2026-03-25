@@ -18,6 +18,7 @@ dependencies:
   http: ^1.1.0
   path: ^1.8.3
   flutter_native_splash: ^2.4.7
+  carousel_slider: ^5.1.2
 
 dev_dependencies:
   flutter_test:
@@ -43,6 +44,9 @@ flutter:
     - assets/images/grimorio_empty.svg
     - assets/images/grimorio_1152.png
     - assets/images/grimorio_titulo_1152.png
+    - assets/carousel/carousel-001.png
+    - assets/carousel/carousel-002.png
+    - assets/carousel/carousel-003.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
