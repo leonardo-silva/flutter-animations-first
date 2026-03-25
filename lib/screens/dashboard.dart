@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:grimorio/screens/components/carousel_item.dart';
 import 'package:grimorio/screens/login.dart';
 import 'package:grimorio/screens/components/primary_button.dart';
 import 'package:grimorio/theme.dart';
@@ -21,20 +22,29 @@ class Dashboard extends StatelessWidget {
             child: Stack(
               alignment: Alignment.center,
               children: <Widget>[
-                //SvgPicture.asset("assets/images/background.svg"),
+                SvgPicture.asset("assets/images/background.svg"),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     //SvgPicture.asset("assets/images/logo.svg"),
                     CarouselSlider(
-                      items: <Widget>[
-                        Image.asset("assets/carousel/carousel-001.png"),
-                        Image.asset("assets/carousel/carousel-002.png"),
-                        Image.asset("assets/carousel/carousel-003.png"),
+                      items: const <Widget>[
+                        CarouselItem(
+                            imagePath: "carousel-001.png",
+                            text: "Registre seus livros"),
+                        CarouselItem(
+                            imagePath: "carousel-002.png",
+                            text: "Anote suas leituras"),
+                        CarouselItem(
+                            imagePath: "carousel-003.png",
+                            text: "Visualize seu progresso"),
                       ],
                       options: CarouselOptions(
                         autoPlay: true,
                         enlargeCenterPage: true,
+                        height: 550,
+                        viewportFraction: 1,
+                        aspectRatio: 1,
                       ),
                     ),
                     Padding(
