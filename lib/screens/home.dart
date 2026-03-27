@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:grimorio/controller/book_controller.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../theme.dart';
 import '../models/personal_book.dart';
@@ -157,7 +158,8 @@ class _EmptyHome extends StatelessWidget {
       ),
       Padding(
         padding: const EdgeInsets.only(bottom: 40.0),
-        child: SvgPicture.asset("assets/images/grimorio_empty.svg"),
+        child: Lottie.asset("assets/animations/book_lottie.json"),
+        // child: SvgPicture.asset("assets/images/grimorio_empty.svg"),
       ),
       Padding(
         padding: const EdgeInsets.only(bottom: 8.0),
